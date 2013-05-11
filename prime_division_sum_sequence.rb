@@ -11,8 +11,8 @@ range = ARGV[0].to_i..ARGV[1].to_i
 ns = []
 es = []
 range.each do |i|
-  ns << "#{i}".rjust(4)
-  es << "#{prime_division_sum(i)}".rjust(4)
+  ns << i.to_s.rjust(4)
+  es << prime_division_sum(i).to_s.rjust(4)
 end
 
 puts "|#{ns.join('|')}|"
